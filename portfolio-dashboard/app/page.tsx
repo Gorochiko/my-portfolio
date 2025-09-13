@@ -1,14 +1,11 @@
 
-
-import { YourName } from "./yourNameVariable"
+import { YourName } from "./Information"
 import ProjectCarousel from "../components/ProjectCarousel"
 import { Sidebar } from "@/components/Sidebar"
 export default function PortfolioDashboard() {
   return (
     <div className="min-h-screen bg-[#15161a] text-white flex">
-      {/* Sidebar */}
       <Sidebar />
-
       {/* Main Content */}
       <div className="flex-1 px-12 py-12 max-w-6xl mx-auto">
         {/* Header Section */}
@@ -17,7 +14,7 @@ export default function PortfolioDashboard() {
           <p className="text-[#aaaeb9] text-lg leading-relaxed max-w-2xl">
             I am a Software Engineering graduate with expertise in both {" "} 
             <span className="text-white font-medium">backend</span>
-            {" "}  and {" "} 
+            {" "} and {" "} 
              <span className="text-white font-medium">frontend development</span>. I have worked on a personal website for {" "}  
              <span className="text-white font-medium">booking movie tickets</span> and a collaborative {" "}  
              <span className="text-white font-medium">Admin website</span> for managing a Korean language learning platform. I am passionate about building {" "}  

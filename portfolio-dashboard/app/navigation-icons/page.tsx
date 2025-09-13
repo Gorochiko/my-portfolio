@@ -1,13 +1,9 @@
 "use client"
 
+import { Sidebar } from "@/components/Sidebar"
 import {
   ArrowLeft,
-  Home,
   MousePointer,
-  Globe,
-  Camera,
-  Linkedin,
-  Github,
   TextCursor as Cursor,
   Move,
   Hand,
@@ -65,36 +61,7 @@ export default function NavigationIconsPage() {
 
   return (
     <div className="min-h-screen bg-[#15161a] text-white flex">
-      {/* Sidebar */}
-      <div className="w-20 flex flex-col items-center py-8">
-        <div className="bg-[#2a2d36] rounded-full p-2 flex flex-col items-center space-y-4">
-          <Link href="/" className="p-3 hover:bg-[#3f424d] rounded-full transition-colors">
-            <Home className="w-5 h-5 text-[#717689]" />
-          </Link>
-
-          {/* Active MousePointer icon */}
-          <div className="p-3 bg-[#3f424d] rounded-full">
-            <MousePointer className="w-5 h-5 text-white" />
-          </div>
-          <div className="w-1 h-1 bg-white rounded-full"></div>
-
-          <div className="p-3 hover:bg-[#3f424d] rounded-full transition-colors">
-            <Globe className="w-5 h-5 text-[#717689]" />
-          </div>
-          <div className="p-3 hover:bg-[#3f424d] rounded-full transition-colors">
-            <Camera className="w-5 h-5 text-[#717689]" />
-          </div>
-
-          <div className="w-6 h-px bg-[#3f424d] my-2"></div>
-
-          <div className="p-3 hover:bg-[#3f424d] rounded-full transition-colors">
-            <Linkedin className="w-5 h-5 text-[#717689]" />
-          </div>
-          <div className="p-3 hover:bg-[#3f424d] rounded-full transition-colors">
-            <Github className="w-5 h-5 text-[#717689]" />
-          </div>
-        </div>
-      </div>
+    
 
       {/* Main Content */}
       <div className="flex-1 px-12 py-8">
