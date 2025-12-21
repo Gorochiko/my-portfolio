@@ -1,5 +1,5 @@
 "use client"
-import {  MousePointer, Globe, Camera, Linkedin, Github } from "lucide-react"
+import { MousePointer, Globe, Camera, Linkedin, Github } from "lucide-react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import Link from "next/link"
 import { useRef } from "react"
@@ -23,22 +23,7 @@ interface Project {
 
 
 export default function ProjectCarousel() {
-      const projects = [
-    {
-      id: "design-projects",
-      title: "Design projects",
-      subtitle: "Replace with cover",
-      category: "Design",
-      description: "My design projects",
-      icon: MousePointer,
-      gradient: "from-[#01071a] via-[#000588] to-[#b6d2ff]",
-      hoverColors: {
-        title: "group-hover:text-[#cdffe8]",
-        subtitle: "group-hover:text-[#b6d2ff]",
-        description: "group-hover:text-[#b6d2ff]",
-      },
-      shadowColor: "group-hover:shadow-blue-500/10",
-    },
+  const projects = [
     {
       id: "mobile-projects",
       title: "Mobile projects",
@@ -70,45 +55,16 @@ export default function ProjectCarousel() {
       shadowColor: "group-hover:shadow-rose-500/10",
     },
   ] as Project[]
-  const scrollContainerRef = useRef<HTMLDivElement>(null)
-
-  const scrollLeft = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: -400, behavior: "smooth" })
-    }
-  }
-
-  const scrollRight = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: 400, behavior: "smooth" })
-    }
-  }
 
   return (
     <div className="mb-17">
       <div className="flex items-center justify-between mb-8">
         <h2 className="text-3xl font-bold">Projects</h2>
-        <div className="flex items-center space-x-2">
-          <button
-            onClick={scrollLeft}
-            className="p-2 bg-[#2a2d36] hover:bg-[#3f424d] rounded-full transition-colors duration-200 group"
-            aria-label="Scroll left"
-          >
-            <ChevronLeft className="w-5 h-5 text-[#717689] group-hover:text-white transition-colors" />
-          </button>
-          <button
-            onClick={scrollRight}
-            className="p-2 bg-[#2a2d36] hover:bg-[#3f424d] rounded-full transition-colors duration-200 group"
-            aria-label="Scroll right"
-          >
-            <ChevronRight className="w-5 h-5 text-[#717689] group-hover:text-white transition-colors" />
-          </button>
-        </div>
       </div>
 
       <div
-        ref={scrollContainerRef}
-        className="flex space-x-6 overflow-x-auto scrollbar-hide pb-4"
+
+        className="flex space-x-6 justify-center scrollbar-hide pb-4"
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {projects.map((project) => {
@@ -156,16 +112,6 @@ export default function ProjectCarousel() {
             </Link>
           )
         })}
-      </div>
-
-      {/* Scroll indicator dots */}
-      <div className="flex justify-center mt-6 space-x-2">
-        {projects.map((_, index) => (
-          <div
-            key={index}
-            className="w-2 h-2 bg-[#3f424d] rounded-full transition-colors duration-200 hover:bg-[#717689]"
-          />
-        ))}
       </div>
     </div>
   )

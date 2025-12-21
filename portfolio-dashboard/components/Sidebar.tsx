@@ -14,19 +14,9 @@ export function Sidebar() {
         {/* Active indicator dot */}
         <div className="w-1 h-1 bg-white rounded-full"></div>
 
-        {/* Navigation icons */}
-        <Link href="/navigation-icons" className="p-3 hover:bg-[#3f424d] rounded-full transition-colors">
-          <MousePointer className="w-5 h-5 text-[#717689] hover:text-white transition-colors" />
-        </Link>
-        <div className="p-3 hover:bg-[#3f424d] rounded-full transition-colors">
-          <Globe className="w-5 h-5 text-[#717689]" />
-        </div>
-        <div className="p-3 hover:bg-[#3f424d] rounded-full transition-colors">
-          <Camera className="w-5 h-5 text-[#717689]" />
-        </div>
+      
+  
 
-        {/* Divider line */}
-        <div className="w-6 h-px bg-[#3f424d] my-2"></div>
 
         {/* Social icons */}
         <Link href={LinkedInURL} className="p-3 hover:bg-[#3f424d] rounded-full transition-colors" target="_blank" rel="noopener noreferrer">
@@ -34,6 +24,9 @@ export function Sidebar() {
         </Link>
         <Link href={GitHubURL} className="p-3 hover:bg-[#3f424d] rounded-full transition-colors" target="_blank" rel="noopener noreferrer">
           <Github className="w-5 h-5 text-[#717689]" />
+        </Link>
+        <Link href="#" className="p-3 hover:bg-[#3f424d] rounded-full transition-colors">
+          <Globe className="w-5 h-5 text-[#717689]" />
         </Link>
       </div>
     </div>

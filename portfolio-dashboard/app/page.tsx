@@ -2,6 +2,10 @@
 import { YourName } from "./Information"
 import ProjectCarousel from "../components/ProjectCarousel"
 import { Sidebar } from "@/components/Sidebar"
+import { SkillsChart } from "@/components/skills-chart"
+import { skillsData } from "@/mocks/skills"
+import { ExperienceTimeline } from "@/components/works-experience"
+import { experienceData } from "@/mocks/timeline"
 export default function PortfolioDashboard() {
   return (
     <div className="min-h-screen bg-[#15161a] text-white flex">
@@ -12,18 +16,28 @@ export default function PortfolioDashboard() {
         <div className="mb-16">
           <h1 className="text-4xl font-bold mb-6">{YourName}</h1>
           <p className="text-[#aaaeb9] text-lg leading-relaxed max-w-2xl">
-            I am a Software Engineering graduate with expertise in both {" "} 
+            I am a Software Engineering graduate with expertise in both {" "}
             <span className="text-white font-medium">backend</span>
-            {" "} and {" "} 
-             <span className="text-white font-medium">frontend development</span>. I have worked on a personal website for {" "}  
-             <span className="text-white font-medium">booking movie tickets</span> and a collaborative {" "}  
-             <span className="text-white font-medium">Admin website</span> for managing a Korean language learning platform. I am passionate about building {" "}  
-             <span className="text-white font-medium">efficient</span> and <span className="text-white font-medium">scalable web applications</span>.
+            {" "} and {" "}
+            <span className="text-white font-medium">frontend development</span>. I have worked on a personal website for {" "}
+            <span className="text-white font-medium">booking movie tickets</span> and a collaborative {" "}
+            <span className="text-white font-medium">Admin website</span> for managing a Korean language learning platform. I am passionate about building {" "}
+            <span className="text-white font-medium">efficient</span> and <span className="text-white font-medium">scalable web applications</span>.
           </p>
         </div>
 
+
+        <div className="mb-12">
+          <ExperienceTimeline experiences={experienceData} />
+        </div>
         {/* Projects Section - Client Component */}
-        <ProjectCarousel  />
+        <ProjectCarousel />
+        {/* Skills Section */}
+        <div className="mb-12">
+          <SkillsChart skills={skillsData} />
+        </div>
+
+
 
         {/* Footer */}
         <footer className="text-center text-[#aaaeb9] border-t border-[#3f424d] pt-8 mt-8">
